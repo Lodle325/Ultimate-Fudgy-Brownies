@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍫 Ultimate Fudgy Brownies - Recipe Guide</title>
+   
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <span class="emoji-badge">🍫</span>
+            <h1>Ultimate Fudgy Brownies</h1>
+            <p class="tagline">Crisp top, gooey center – pure chocolate heaven</p>
+            <div class="meta-row">
+                <span>⏱️ Prep 15 min</span>
+                <span>🔥 Bake 25-30 min</span>
+                <span>👥 Serves <span id="servesDisplay">9</span></span>
+            </div>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="ingredients">📋 Ingredients</button>
+            <button class="tab-btn" data-tab="instructions">👩‍🍳 Instructions</button>
+            <button class="tab-btn" data-tab="timer">⏲️ Timer</button>
+            <button class="tab-btn" data-tab="tips">💡 Tips & FAQ</button>
+        </nav>
+
+        <section class="tab-panel active" id="panel-ingredients">
+            <div class="card">
+                <h2>Ingredients</h2>
+                <div class="servings-control">
+                    <span class="servings-label">Adjust servings:</span>
+                    <button id="decrementServings">−</button>
+                    <span class="servings-num" id="servingsCount">9</span>
+                    <button id="incrementServings">+</button>
+                    <span style="font-size:0.85rem; color:#8b5a3c;">(standard 9 squares)</span>
+                </div>
+                <ul class="ingredients-list" id="ingredientsList"></ul>
+                <button class="print-btn" onclick="window.print()">🖨️ Print Recipe</button>
+            </div>
+        </section>
+
+        <section class="tab-panel" id="panel-instructions">
+            <div class="card">
+                <h2>Step‑by‑Step Instructions</h2>
+                <ol class="step-list" id="stepList"></ol>
+                <div class="progress-wrap">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-label" id="progressLabel">0% completed</div>
+            </div>
+        </section>
+
+        <section class="tab-panel" id="panel-timer">
+            <div class="card" style="text-align:center;">
+                <h2>Baking Timer</h2>
+                <p style="margin-bottom:16px;">Set for the perfect fudgy center</p>
+                <div class="timer-box">
+                    <span class="timer-display" id="timerDisplay">25:00</span>
+                    <div>
+                        <button id="timerStartPause">▶ Start</button>
+                        <button id="timerReset">↺ Reset</button>
+                    </div>
+                </div>
+                <p style="margin-top:16px; color:#8b5a3c;">Default: 25 minutes. Click to pause.</p>
+            </div>
+        </section>
+
+        <section class="tab-panel" id="panel-tips">
+            <div class="card">
+                <h2>Pro Tips</h2>
+                <div class="tip-grid">
+                    <div class="tip-card"><span class="tip-icon">🧈</span><h4>Room Temp Eggs</h4><p>Creates a smoother batter & shiny top.</p></div>
+                    <div class="tip-card"><span class="tip-icon">🧂</span><h4>Flaky Salt</h4><p>Sprinkle on top before baking to enhance chocolate.</p></div>
+                    <div class="tip-card"><span class="tip-icon">📏</span><h4>Toothpick Test</h4><p>Moist crumbs, not wet batter – it’s ready!</p></div>
+                    <div class="tip-card"><span class="tip-icon">❄️</span><h4>Chill Before Cutting</h4><p>Refrigerate 1h for ultra‑clean squares.</p></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Frequently Asked Questions</h2>
+                <details class="faq-item"><summary>Why did my brownies sink in the middle?</summary><p class="faq-answer">Usually over‑mixing or under‑baking. Mix until just combined, and trust the toothpick test.</p></details>
+                <details class="faq-item"><summary>Can I use cocoa powder only?</summary><p class="faq-answer">Yes, but you’ll miss the fudgy texture. Use ¾ cup cocoa + ¼ cup melted butter as a substitute.</p></details>
+                <details class="faq-item"><summary>How do I get that crinkly top?</summary><p class="faq-answer">Dissolve sugar completely in warm butter, and beat eggs really well – that’s the secret!</p></details>
+            </div>
+        </section>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</body>
+</html>
